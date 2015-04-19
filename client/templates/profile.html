@@ -1,0 +1,125 @@
+<div class="container" ng-controller="dashboardCtrl">
+    <tabset>
+        <tab heading="Profile">
+            <div class="col-md-5 h10">
+                <form ng-submit="saveUser()">
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" class="form-control" placeholder="Username" ng-model="user.username">
+                    </div>
+                    <div class="form-group">
+                        <label>Nama</label>
+                        <input type="text" class="form-control" placeholder="Nama" ng-model="user.name">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="text" class="form-control" placeholder="Phone" ng-model="user.phone">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-custom">Simpan</button>
+                    </div>
+                </form>
+            </div>
+        </tab>
+        <tab heading="Ubah Password">
+            <div class="col-md-5 h10">
+                <form ng-submit="changepass()">
+                    <div class="form-group">
+                        <label>Password Baru</label>
+                        <input type="password" class="form-control" placeholder="Password Baru" ng-model="user.newpassword">
+                    </div>
+                    <div class="form-group">
+                        <label>Ulangi Password Baru</label>
+                        <input type="password" class="form-control" placeholder="Ulangi Password">
+                    </div>
+                    <button type="submit" class="btn btn-custom">Simpan</button>
+                </form>
+            </div>
+        </tab>
+        <tab heading="Alamat">
+            <div class="row h10">
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Provinsi</label>
+                                <input type="text" class="form-control" 
+                                    typeahead="p as p.name for p in provinsi | filter:$viewValue | limitTo:8"
+                                    typeahead-on-select="getKabupaten($model._id)"
+                                    placeholder="Provinsi" 
+                                    ng-model="address.provinsi">
+                            </div>
+                            <div class="form-group">
+                                <label>Kota/Kabupaten</label>
+                                <input type="text" class="form-control"
+                                    typeahead="k as k.name for k in kabupaten | filter:$viewValue | limitTo:8"  
+                                    typeahead-on-select="getKecamatan($model._id)"
+                                    placeholder="Kota/Kabupaten" 
+                                    ng-model="address.kabupaten">
+                            </div>
+                            <div class="form-group">
+                                <label>Kelurahan/Kecamatan</label>
+                                <input type="text" class="form-control" 
+                                    typeahead="k as k.name for k in kecamatan | filter:$viewValue | limitTo:8"
+                                    typeahead-on-select="getDesa($model._id)"
+                                    placeholder="Kelurahan/Kecamatan" 
+                                    ng-model="address.kecamatan">
+                            </div>
+                            <div class="form-group">
+                                <label>Desa</label>
+                                <input type="text" class="form-control" 
+                                    typeahead="d as d.name for d in desa | filter:$viewValue | limitTo:8"
+                                    placeholder="Desa" 
+                                    ng-model="address.desa">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Kode Pos</label>
+                                <input type="text" class="form-control" 
+                                    placeholder="Kode Pos" 
+                                    ng-model="address.zipcode">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone</label>
+                                <input type="text" class="form-control" 
+                                    placeholder="Phone" 
+                                    ng-model="address.phone">
+                            </div>
+                            <div class="form-group">
+                                <label>Alamat Detail</label>
+                                <textarea rows="3"
+                                    class="form-control" 
+                                    placeholder="Jl. Babakan Lio, No. 20, RT 03" 
+                                    ng-model="address.address"></textarea>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group pull-right">
+                            <button ng-click="save()" class="btn btn-sm btn-success">
+                                <i class="fa fa-save"></i>&nbsp;Simpan
+                            </button>
+                            <button ng-click="delete()" class="btn btn-sm btn-danger">
+                                <i class="fa fa-trash"></i>&nbsp;Hapus
+                            </button>
+                            <button ng-click="reset()" class="btn btn-sm btn-warning">
+                                <i class="fa fa-close"></i>&nbsp;Batal
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- / panel preview -->
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="table-responsive">
+                                <table></table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </tab>
+    </tabset>
+</div>

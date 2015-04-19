@@ -1,0 +1,28 @@
+{
+  "name": "Alpukat-Web",
+  "version": "1.0.0",
+  "description": "Aplikasi penanda multiple koordinat web version",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Alpukat/alpukat.github.io.git"
+  },
+  "keywords": [
+    "map"
+  ],
+  "author": "Windu Purnomo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alpukat/alpukat.github.io/issues"
+  },
+  "homepage": "https://github.com/Alpukat/alpukat.github.io",
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.4.3",
+    "gulp-livereload": "^3.7.0",
+    "gulp-uglify": "^1.1.0"
+  }
+}

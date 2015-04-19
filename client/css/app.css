@@ -1,0 +1,185 @@
+body {
+    background-image: url('../img/pattern2.png');
+    /*background-color: #EBEDDD;*/
+    
+    font-family: 'Lato';
+}
+a, u {
+    text-decoration: none !important;
+}
+a:link {
+    color: #567356;
+}
+
+a:visited {
+    color: #999999;
+}
+a:hover {
+    color: #333333;
+}
+a:focus {
+    color: #333333;
+}
+a:active {
+    color: #009900;
+}
+.logo {
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #10623F !important;
+    height: 50px;
+    display: block;
+}
+.home {
+    padding-top: 60px;
+}
+.btn-custom {
+    color: #fff;
+    background-color: #10623F;
+    border-color: #10623F;
+}
+.btn-custom:hover {
+    color: #C0DBE2;
+    background-color: #10623F;
+    border-color: #10623F;
+}
+.navbar-inverse {
+    background-image: url('../img/noise.png');
+    background-color: #10623F;
+    border-color: #10623F;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+    background-color: #10623F;
+    border-color: #10623F;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+    color: #F2EF16;
+    background-color: rgba(3, 108, 63, 0.75);
+    /*background-color: #036C3F;*/
+}
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}
+.table {
+    font-size: 92%;
+}
+.table-hover tbody tr:hover > td {
+    cursor: pointer
+}
+table td.number, th.number {
+    text-align: right;
+}
+table>tbody>tr.active>td {
+    background-color: rgba(55, 155, 22, 0.34) !important
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+.w90 {
+    width: 90px !important;
+}
+.gap {
+    margin-top: 10px;
+}
+
+.h5 { margin-top: 5px; }
+.h10 { margin-top: 10px; }
+.h15 { margin-top: 15px; }
+.h20 { margin-top: 20px; }
+.h25 { margin-top: 25px; }
+
+.breadcrumb {
+    font-size: 40%;
+    background-image: url('../img/pattern2.png');
+    background-color: #EBEDDD;
+}
+.nav, .pagination, .carousel, .panel-title a {
+    cursor: pointer;
+}
+.sub-text {
+    font-size: smaller;
+    font-style: italic;
+    color: rgb(120, 168, 126);
+}
+@media (max-width: 767px) {
+    .navbar-brand {
+        padding: 0;
+    }
+    .navbar-brand img {
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+}
+/* Dates */
+
+.agenda .agenda-date {
+    width: 170px;
+}
+.agenda .agenda-min .agenda-date {
+    width: 0px;
+}
+.agenda .agenda-date .dayofmonth {
+    width: 40px;
+    font-size: 36px;
+    line-height: 36px;
+    float: left;
+    text-align: right;
+    margin-right: 10px;
+    color: #10623F;
+}
+.agenda .agenda-date .shortdate {
+    font-size: 0.75em;
+}
+/* Times */
+
+.agenda .agenda-time {
+    width: 140px;
+}
+.clwh {
+    color: white !important;
+}
+footer {
+	margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgb(181, 173, 173);
+    font-size: 80%;
+}
+
+.ta-editor {
+    min-height: 300px;
+    height: auto;
+    overflow: auto;
+    font-family: inherit;
+    font-size: 100%;
+    margin:20px 0;
+}
+
+label > small {
+    color: #A5A0A0
+}
+
+.empty-order{
+    font-size: 250px;
+    /*color: #999900;*/
+}
